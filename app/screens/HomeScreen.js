@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Text, View, SafeAreaView, TouchableOpacity, ScrollView } from 'react-native';
 import { MagnifyingGlassIcon, StarIcon } from 'react-native-heroicons/outline'
 import { styles } from '../styles/styles';
@@ -8,22 +8,37 @@ import TrendingMovies from '../components/TrendingMovies'
 import MovieList from '../components/MovieList';
 import { useNavigation } from '@react-navigation/native';
 import Header from '../components/Header';
+import { fetchTopratedMovies, fetchTrendingMovies, fetchUpcomingMovies } from '../api/moviedb';
 
 
 
 export default function HomeScreen() {
 
-    const [trendingMovies, setTrendingMovies] = useState([1, 2, 3])
-    const [upcomingMovies, setUpcomingMovies] = useState([1, 2, 3])
-    const [topRatedMovies, setTopRatedMovies] = useState([1, 2, 3])
+    const [trendingMovies, setTrendingMovies] = useState([])
+    const [upcomingMovies, setUpcomingMovies] = useState([])
+    const [topRatedMovies, setTopRatedMovies] = useState([])
 
-    const navigation = useNavigation()
+    useEffect(()=>{
+        getTrendingMovies()
+        getUpcomingMovies()
+        getTopRatedMovies()
+    }, [])
 
-    const handleFavoritesPress = () => {
-        navigation.navigate('Favorites')
+    const getTrendingMovies = async () => {
+        const data = await fetchTrendingMovies()
+        if(data && data.results) setTrendingMovies(data.results)
     }
 
+    const getUpcomingMovies = async () => {
+        const data = await fetchUpcomingMovies()
+        if(data && data.results) setUpcomingMovies(data.results)
+    }
 
+    const getTopRatedMovies = async () => {
+        const data = await fetchTopratedMovies()
+        if(data && data.results) setTopRatedMovies(data.results)
+    }
+    
     return (
         <SafeAreaView style={styles.container}>
 

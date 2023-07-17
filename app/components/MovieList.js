@@ -26,54 +26,29 @@ export default function MovieList({ title, data }) {
                 showsHorizontalScrollIndicator={false}
             >
 
-                <TouchableWithoutFeedback onPress={() => handleMoviePress(movieId)}>
-                    <View style={{ flexDirection: "row", paddingHorizontal: 2 }}>
+                {data.map((movie, index) => {
+                    return (
+                        <TouchableWithoutFeedback key={index} onPress={() => handleMoviePress(movie.id)}>
+                            <View style={{ flexDirection: "row", paddingHorizontal: 2 }}>
 
-                        <View style={{ marginHorizontal: 4 }}>
-                            <Image
-                                source={{ uri: "https://www.vintagemovieposters.co.uk/wp-content/uploads/2020/11/IMG_5878-scaled.jpeg" }}
-                                style={{
-                                    width: width * 0.4,
-                                    height: height * 0.3,
-                                    resizeMode: "stretch"
-                                }}
-                            />
-                            <Text style={styles.movieTitle} numberOfLines={1} ellipsizeMode='tail'>
-                                {movietitle.length > 12 ? movietitle.slice(0, 12) + "..." : movietitle}
-                            </Text>
-                        </View>
+                                <View style={{ marginHorizontal: 4 }}>
+                                    <Image
+                                        source={{ uri: "https://image.tmdb.org/t/p/w500" + movie.poster_path }}
+                                        style={{
+                                            width: width * 0.4,
+                                            height: height * 0.3,
+                                            resizeMode: "stretch"
+                                        }}
+                                    />
+                                    <Text style={styles.movieTitle} numberOfLines={1} ellipsizeMode='tail'>
+                                        {movie.original_title.length > 12 ? movie.original_title.slice(0, 12) + "..." : movie.original_title}
+                                    </Text>
+                                </View>
+                            </View>
 
-                        <View style={{ marginHorizontal: 4 }}>
-                            <Image
-                                source={{ uri: "https://www.vintagemovieposters.co.uk/wp-content/uploads/2020/11/IMG_5878-scaled.jpeg" }}
-                                style={{
-                                    width: width * 0.4,
-                                    height: height * 0.3,
-                                    resizeMode: "stretch"
-                                }}
-                            />
-                            <Text style={styles.movieTitle} numberOfLines={1} ellipsizeMode='tail'>
-                                {movietitle.length > 12 ? movietitle.slice(0, 12) + "..." : movietitle}
-                            </Text>
-                        </View>
-
-                        <View style={{ marginHorizontal: 4 }}>
-                            <Image
-                                source={{ uri: "https://www.vintagemovieposters.co.uk/wp-content/uploads/2020/11/IMG_5878-scaled.jpeg" }}
-                                style={{
-                                    width: width * 0.4,
-                                    height: height * 0.3,
-                                    resizeMode: "stretch"
-                                }}
-                            />
-                            <Text style={styles.movieTitle} numberOfLines={1} ellipsizeMode='tail'>
-                                {movietitle.length > 12 ? movietitle.slice(0, 12) + "..." : movietitle}
-                            </Text>
-                        </View>
-
-                    </View>
-
-                </TouchableWithoutFeedback>
+                        </TouchableWithoutFeedback>
+                    )
+                })}
 
 
 

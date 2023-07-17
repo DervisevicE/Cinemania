@@ -7,7 +7,7 @@ export default function MovieCard({ movie, handleClick }) {
     return (
         <TouchableWithoutFeedback onPress={handleClick}>
             <Image
-                source={{uri: "https://www.vintagemovieposters.co.uk/wp-content/uploads/2020/11/IMG_5878-scaled.jpeg"}}
+                source={{uri: "https://image.tmdb.org/t/p/w500"+movie.poster_path}}
                 style={{
                     width: width*0.6,
                     height: height*0.4
