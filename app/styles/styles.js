@@ -1,4 +1,5 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, Dimensions } from "react-native";
+var { width, height } = Dimensions.get("window")
 
 export const styles = StyleSheet.create({
     container: {
@@ -33,6 +34,34 @@ export const styles = StyleSheet.create({
         backgroundColor: "#6b6a66",
         textAlign: "center",
         fontSize: 16,
-        
+    },
+    mainPoster: {
+        width: width * 0.3,
+        height: height * 0.2,
+        resizeMode: "cover",
+        transform: [{ translateY: -80 }],
+        marginHorizontal: 20
+    },
+    moviePoster: {
+        width: width,
+        height: height * 0.4,
+        resizeMode: "cover"
+    },
+    favoritesBtn: {
+        position: 'absolute',
+        top: 40,
+        right: 20,
+        width: 200,
+        height: 40,
+        backgroundColor: '#32a5fc',
+        borderRadius: 5,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    castContainer: {
+        marginTop:8,
+        paddingVertical: 8,
+        borderBottomWidth: 2,
+        borderBottomColor: "#4a4a4a"
     }
 });

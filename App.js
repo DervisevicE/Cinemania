@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import HomeScreen from './app/screens/HomeScreen';
+import MovieDetailsScreen from './app/screens/MovieDetailsScreen'
 
 const Stack = createNativeStackNavigator();
 
@@ -13,6 +14,7 @@ export default function App() {
       <NavigationContainer>
         <Stack.Navigator>
           <Stack.Screen name="Home" options={{ headerShown: false }} component={HomeScreen} />
+          <Stack.Screen name='MovieDetails' options={{headerShown: false}} component={MovieDetailsScreen}/>
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaView>

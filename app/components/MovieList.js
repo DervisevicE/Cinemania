@@ -1,12 +1,22 @@
 import React from "react";
 import { ScrollView, Text, View, Dimensions, Image, TouchableWithoutFeedback } from "react-native";
 import { styles } from "../styles/styles";
+import { useNavigation } from "@react-navigation/native";
 
 var { width, height } = Dimensions.get("window")
 
 export default function MovieList({ title, data }) {
 
     let movietitle = "testtesttesttest"
+    let movieId = 1
+
+    const navigation = useNavigation()
+
+    const handleMoviePress = (movieId) => {
+        navigation.navigate('MovieDetails', { movieId });
+    }
+
+
     return (
         <View style={styles.innerContainer}>
             <Text style={styles.subheaderText}>{title}</Text>
@@ -16,7 +26,7 @@ export default function MovieList({ title, data }) {
                 showsHorizontalScrollIndicator={false}
             >
 
-                <TouchableWithoutFeedback>
+                <TouchableWithoutFeedback onPress={() => handleMoviePress(movieId)}>
                     <View style={{ flexDirection: "row", paddingHorizontal: 2 }}>
 
                         <View style={{ marginHorizontal: 4 }}>
