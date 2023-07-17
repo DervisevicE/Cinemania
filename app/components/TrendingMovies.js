@@ -9,8 +9,8 @@ var {width, height} = Dimensions.get("window")
 
 export default function TrendingMovies({ data }) {
     const navigation = useNavigation()
-    const handleClick = () => {
-        navigation.navigate('Movie', item)
+    const handleClick = (movie) => {
+        navigation.navigate('MovieDetails',  { movieId: movie.id })
     }
 
 
@@ -20,7 +20,7 @@ export default function TrendingMovies({ data }) {
 
             <Carousel
                 data={data}
-                renderItem={({ item }) => <MovieCard movie={item} handleClick={handleClick} />}
+                renderItem={({ item }) => <MovieCard movie={item} handleClick={()=> handleClick(item)} />}
                 firstItem={1}
                 inactiveSlideOpacity={0.6}
                 sliderWidth={width}
