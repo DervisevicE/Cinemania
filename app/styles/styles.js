@@ -10,7 +10,7 @@ export const styles = StyleSheet.create({
         fontSize: 24,
         fontWeight: 'bold'
     },
-    subheaderText:{
+    subheaderText: {
         color: "white",
         fontSize: 20,
         marginBottom: 20
@@ -24,7 +24,15 @@ export const styles = StyleSheet.create({
         justifyContent: 'space-between',
     },
     innerContainer: {
-        marginVertical: 20,
+        marginVertical: 10,
         marginHorizontal: 10
+    },
+    movieTitle: {
+        color: "white",
+        padding: 8,
+        backgroundColor: "#6b6a66",
+        textAlign: "center",
+        fontSize: 16,
+        
     }
 });
