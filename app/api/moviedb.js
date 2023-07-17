@@ -38,3 +38,23 @@ export const fetchTopratedMovies = async () => {
         return {};
     }
 };
+
+export const fetchMovieDetails = async (movieId) => {
+    try {
+        const response = await axios.get(`${apiUrl}/movie/${movieId}?api_key=${apiKey}`);
+        return response.data;
+    } catch (error) {
+        console.log('error: ', error);
+        return {};
+    }
+}
+
+export const fetchCastMembers = async (movieId) => {
+    try {
+        const response = await axios.get(`${apiUrl}/movie/${movieId}/credits?api_key=${apiKey}`);
+        return response.data;
+    } catch (error) {
+        console.log('error: ', error);
+        return {};
+    }
+}
