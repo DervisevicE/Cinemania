@@ -17,7 +17,7 @@ export const styles = StyleSheet.create({
         marginBottom: 20
     },
     headerContainer: {
-        marginTop: 80
+        marginTop: 40
     },
     header: {
         flexDirection: 'row',
@@ -63,5 +63,10 @@ export const styles = StyleSheet.create({
         paddingVertical: 8,
         borderBottomWidth: 2,
         borderBottomColor: "#4a4a4a"
-    }
+    },
+    columnWrapper: {
+        flexWrap: "wrap",
+        justifyContent: "space-between",
+        padding: 10,
+    },
 });

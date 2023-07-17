@@ -21,7 +21,7 @@ export default function MovieDetailsScreen({ route }) {
     }
     return (
         <SafeAreaView style={styles.container}>
-            <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={{ paddingVertical: 10 }}>
+            <ScrollView showsVerticalScrollIndicator={false}>
 
                 <View>
                     <Image
