@@ -44,17 +44,20 @@ export default function MovieDetailsScreen({ route }) {
                         <Text style={{ color: "white" }}>DELETE FROM FAVORITES</Text>
                     </TouchableOpacity>
 
-                    <Text style={{ color: "white" }}>
-                        Earth's mightiest heroes must come together and learn to fight as a team if they are going to stop the mischievous Loki and his alien army from enslaving humanity.
-                        Earth's mightiest heroes must come together and learn to fight as a team if they are going to stop the mischievous Loki and his alien army from enslaving humanity.
-                        Earth's mightiest heroes must come together and learn to fight as a team if they are going to stop the mischievous Loki and his alien army from enslaving humanity.
-                    </Text>
+                    <View style={{ marginHorizontal: 16, marginTop:-34 }}>
+                        <Text style={{ color: "white", }}>
+                            Earth's mightiest heroes must come together and learn to fight as a team if they are going to stop the mischievous Loki and his alien army from enslaving humanity.
+                            Earth's mightiest heroes must come together and learn to fight as a team if they are going to stop the mischievous Loki and his alien army from enslaving humanity.
+                            Earth's mightiest heroes must come together and learn to fight as a team if they are going to stop the mischievous Loki and his alien army from enslaving humanity.
+                        </Text>
 
-                    <FlatList
-                        data={names}
-                        keyExtractor={(item) => item.id}
-                        renderItem={renderItem}
-                    />
+
+                        <FlatList
+                            data={names}
+                            keyExtractor={(item) => item.id}
+                            renderItem={renderItem}
+                        />
+                    </View>
 
                 </View>
             </ScrollView>
