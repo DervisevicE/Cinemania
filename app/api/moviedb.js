@@ -68,3 +68,13 @@ export const fetchSimilarMovies = async (movieId) => {
         return {};
     }
 }
+
+export const fetchSearchMovies = async (query) => {
+    try {
+        const response = await axios.get(`${apiUrl}/search/movie?api_key=${apiKey}&query=${query}`);
+        return response.data;
+    } catch (error) {
+        console.log('error: ', error);
+        return {};
+    }
+}

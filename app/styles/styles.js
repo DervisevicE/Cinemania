@@ -59,7 +59,7 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
     },
     castContainer: {
-        marginTop:8,
+        marginTop: 8,
         paddingVertical: 8,
         borderBottomWidth: 2,
         borderBottomColor: "#4a4a4a"
@@ -69,4 +69,13 @@ export const styles = StyleSheet.create({
         justifyContent: "space-between",
         padding: 10,
     },
+    searchInput: {
+        height: 40,
+        borderColor: 'gray',
+        borderWidth: 1,
+        marginBottom: 16,
+        paddingHorizontal: 8,
+        marginTop:10,
+        color:"white"
+    }
 });

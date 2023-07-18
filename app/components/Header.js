@@ -13,6 +13,7 @@ export default function Header() {
     }
 
     const handleSearchPress = () => {
+        navigation.navigate('Search')
 
     }
 
