@@ -7,9 +7,6 @@ var { width, height } = Dimensions.get("window")
 
 export default function MovieList({ title, data }) {
 
-    let movietitle = "testtesttesttest"
-    let movieId = 1
-
     const navigation = useNavigation()
 
     const handleMoviePress = (movieId) => {
@@ -49,8 +46,6 @@ export default function MovieList({ title, data }) {
                         </TouchableWithoutFeedback>
                     )
                 })}
-
-
 
             </ScrollView>
 

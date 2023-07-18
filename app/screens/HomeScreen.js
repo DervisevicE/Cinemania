@@ -1,12 +1,8 @@
-import { StatusBar } from 'expo-status-bar';
 import React, { useState, useEffect } from 'react';
-import { Text, View, SafeAreaView, TouchableOpacity, ScrollView } from 'react-native';
-import { MagnifyingGlassIcon, StarIcon } from 'react-native-heroicons/outline'
+import {SafeAreaView, ScrollView } from 'react-native';
 import { styles } from '../styles/styles';
-import MovieCard from '../components/MovieCard';
 import TrendingMovies from '../components/TrendingMovies'
 import MovieList from '../components/MovieList';
-import { useNavigation } from '@react-navigation/native';
 import Header from '../components/Header';
 import { fetchTopratedMovies, fetchTrendingMovies, fetchUpcomingMovies } from '../api/moviedb';
 
@@ -44,7 +40,6 @@ export default function HomeScreen() {
 
             <Header />
 
-
             <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={{ paddingVertical: 10 }}>
                 <TrendingMovies data={trendingMovies} />
 
@@ -53,7 +48,6 @@ export default function HomeScreen() {
                 <MovieList title="Top-rated movies" data={topRatedMovies} />
 
             </ScrollView>
-
 
         </SafeAreaView>
     );

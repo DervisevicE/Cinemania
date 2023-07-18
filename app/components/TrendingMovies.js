@@ -5,7 +5,7 @@ import Carousel from "react-native-snap-carousel";
 import MovieCard from "./MovieCard";
 import { useNavigation } from "@react-navigation/native";
 
-var {width, height} = Dimensions.get("window")
+var {width} = Dimensions.get("window")
 
 export default function TrendingMovies({ data }) {
     const navigation = useNavigation()

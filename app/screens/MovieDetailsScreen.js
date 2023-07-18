@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { View, Text, SafeAreaView, Image, FlatList, ScrollView, Dimensions, TouchableOpacity, StyleSheet } from "react-native";
+import { View, Text, SafeAreaView, Image, ScrollView, Dimensions, TouchableOpacity } from "react-native";
 import { styles } from "../styles/styles";
 import { fetchCastMembers, fetchMovieDetails, fetchSimilarMovies } from "../api/moviedb";
 import favoriteMoviesJson from '../api/favoriteMovies.json'
@@ -7,7 +7,7 @@ import MovieList from "../components/MovieList";
 
 
 export default function MovieDetailsScreen({ route }) {
-    var { width, height } = Dimensions.get("window")
+    var { width } = Dimensions.get("window")
     const { movieId } = route.params
     const [movieDetails, setMovieDetails] = useState(null)
     const [castMembers, setCastMembers] = useState()
@@ -90,11 +90,18 @@ export default function MovieDetailsScreen({ route }) {
                         <Text style={{ color: "white" }}>
                             {movieDetails.overview}
                         </Text>
-                        <FlatList
-                            data={castMembers}
-                            keyExtractor={(item) => item.id}
-                            renderItem={renderItem}
-                        />
+
+                        {
+                            castMembers && castMembers.map((item) => {
+                                return (
+                                    <View style={styles.castContainer}>
+                                        <Text style={{ fontSize: 16, fontWeight: "bold", color: "white" }}>{item.original_name}</Text>
+                                    </View>
+                                )
+                            })
+                        }
+
+
                     </View>
 
 
@@ -105,9 +112,4 @@ export default function MovieDetailsScreen({ route }) {
     );
 }
 
-const renderItem = ({ item }) => (
-    <View style={styles.castContainer}>
-        <Text style={{ fontSize: 16, fontWeight: "bold", color: "white" }}>{item.original_name}</Text>
-    </View>
-);
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, SafeAreaView, TouchableWithoutFeedback, ScrollView, FlatList, Dimensions, Image } from "react-native";
+import { View, Text, SafeAreaView, TouchableWithoutFeedback, FlatList, Dimensions, Image } from "react-native";
 import { styles } from "../styles/styles";
 import { useNavigation } from '@react-navigation/native';
 import Header from '../components/Header';
@@ -7,21 +7,9 @@ import favoriteMoviesJson from '../api/favoriteMovies.json'
 
 var { width, height } = Dimensions.get("window")
 const numColumns = 2;
+
 export default function FavoriteMoviesScreen() {
     const navigation = useNavigation()
-
-    // const data = [
-    //     { imgSrc: "https://www.vintagemovieposters.co.uk/wp-content/uploads/2020/11/IMG_5878-scaled.jpeg", title: "Avengers" },
-    //     { imgSrc: "https://www.vintagemovieposters.co.uk/wp-content/uploads/2020/11/IMG_5878-scaled.jpeg", title: "Avengers" },
-    //     { imgSrc: "https://www.vintagemovieposters.co.uk/wp-content/uploads/2020/11/IMG_5878-scaled.jpeg", title: "Avengers" },
-    //     { imgSrc: "https://www.vintagemovieposters.co.uk/wp-content/uploads/2020/11/IMG_5878-scaled.jpeg", title: "Avengers" },
-    //     { imgSrc: "https://www.vintagemovieposters.co.uk/wp-content/uploads/2020/11/IMG_5878-scaled.jpeg", title: "Avengers" },
-    //     { imgSrc: "https://www.vintagemovieposters.co.uk/wp-content/uploads/2020/11/IMG_5878-scaled.jpeg", title: "Avengers" },
-    //     { imgSrc: "https://www.vintagemovieposters.co.uk/wp-content/uploads/2020/11/IMG_5878-scaled.jpeg", title: "Avengers" },
-    //     { imgSrc: "https://www.vintagemovieposters.co.uk/wp-content/uploads/2020/11/IMG_5878-scaled.jpeg", title: "Avengers" },
-    // ]
-
-    let movieId = 1
 
     const handleMoviePress = (movieId) => {
         navigation.navigate('MovieDetails', { movieId });
@@ -47,9 +35,6 @@ export default function FavoriteMoviesScreen() {
         </TouchableWithoutFeedback>
     );
 
-    const handleTitlePress = () => {
-
-    }
 
 
     return (
@@ -57,10 +42,6 @@ export default function FavoriteMoviesScreen() {
 
 
             <Header />
-
-
-
-            <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={{ paddingVertical: 10 }}>
 
                 <FlatList
                     data={favoriteMoviesJson}
@@ -70,7 +51,6 @@ export default function FavoriteMoviesScreen() {
                     columnWrapperStyle={styles.columnWrapper}
                 />
 
-            </ScrollView>
         </SafeAreaView>
     )
 

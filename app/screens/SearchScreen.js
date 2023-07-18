@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text, Image, SafeAreaView, TextInput, TouchableWithoutFeedback, TouchableOpacity, ScrollView, FlatList, Dimensions } from "react-native";
+import { View, Text, Image, SafeAreaView, TextInput, TouchableWithoutFeedback, TouchableOpacity, FlatList, Dimensions } from "react-native";
 import { styles } from "../styles/styles";
 import { MagnifyingGlassIcon } from 'react-native-heroicons/outline'
 import { fetchSearchMovies } from "../api/moviedb";
@@ -60,7 +60,6 @@ export default function SearchScreen() {
             </TouchableOpacity>
 
 
-            <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={{ paddingVertical: 10 }}>
 
                 <FlatList
                     data={searchResults}
@@ -70,7 +69,6 @@ export default function SearchScreen() {
                     columnWrapperStyle={styles.columnWrapper}
                 />
 
-            </ScrollView>
 
 
 
