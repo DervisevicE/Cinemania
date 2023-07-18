@@ -1,0 +1,313 @@
+[
+    {
+        "adult": false,
+        "backdrop_path": "/yF1eOkaYvwiORauRCPWznV9xVvi.jpg",
+        "belongs_to_collection": null,
+        "budget": 190000000,
+        "genres": [
+            {
+                "id": 28,
+                "name": "Action"
+            },
+            {
+                "id": 12,
+                "name": "Adventure"
+            },
+            {
+                "id": 878,
+                "name": "Science Fiction"
+            }
+        ],
+        "homepage": "https://www.dc.com/theflash",
+        "id": 298618,
+        "imdb_id": "tt0439572",
+        "original_language": "en",
+        "original_title": "The Flash",
+        "overview": "When his attempt to save his family inadvertently alters the future, Barry Allen becomes trapped in a reality in which General Zod has returned and there are no Super Heroes to turn to. In order to save the world that he is in and return to the future that he knows, Barry's only hope is to race for his life. But will making the ultimate sacrifice be enough to reset the universe?",
+        "popularity": 1080.96,
+        "poster_path": "/rktDFPbfHfUbArZ6OOOKsXcv0Bm.jpg",
+        "production_companies": [
+            {
+                "id": 174,
+                "logo_path": "/IuAlhI9eVC9Z8UQWOIDdWRKSEJ.png",
+                "name": "Warner Bros. Pictures",
+                "origin_country": "US"
+            },
+            {
+                "id": 152809,
+                "logo_path": null,
+                "name": "Double Dream",
+                "origin_country": "US"
+            },
+            {
+                "id": 170335,
+                "logo_path": null,
+                "name": "The Disco Factory",
+                "origin_country": "US"
+            },
+            {
+                "id": 128064,
+                "logo_path": "/13F3Jf7EFAcREU0xzZqJnVnyGXu.png",
+                "name": "DC Films",
+                "origin_country": "US"
+            }
+        ],
+        "production_countries": [
+            {
+                "iso_3166_1": "US",
+                "name": "United States of America"
+            }
+        ],
+        "release_date": "2023-06-13",
+        "revenue": 245000000,
+        "runtime": 144,
+        "spoken_languages": [
+            {
+                "english_name": "English",
+                "iso_639_1": "en",
+                "name": "English"
+            },
+            {
+                "english_name": "Russian",
+                "iso_639_1": "ru",
+                "name": "Pусский"
+            },
+            {
+                "english_name": "Spanish",
+                "iso_639_1": "es",
+                "name": "Español"
+            }
+        ],
+        "status": "Released",
+        "tagline": "Worlds collide.",
+        "title": "The Flash",
+        "video": false,
+        "vote_average": 6.865,
+        "vote_count": 928
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/xcXALwBjdHIjrESpGVhghqj8fGT.jpg",
+        "belongs_to_collection": null,
+        "budget": 100000000,
+        "genres": [
+            {
+                "id": 18,
+                "name": "Drama"
+            },
+            {
+                "id": 36,
+                "name": "History"
+            },
+            {
+                "id": 53,
+                "name": "Thriller"
+            }
+        ],
+        "homepage": "http://www.oppenheimermovie.com",
+        "id": 872585,
+        "imdb_id": "tt15398776",
+        "original_language": "en",
+        "original_title": "Oppenheimer",
+        "overview": "The story of J. Robert Oppenheimer’s role in the development of the atomic bomb during World War II.",
+        "popularity": 413.676,
+        "poster_path": "/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg",
+        "production_companies": [
+            {
+                "id": 9996,
+                "logo_path": "/3tvBqYsBhxWeHlu62SIJ1el93O7.png",
+                "name": "Syncopy",
+                "origin_country": "GB"
+            },
+            {
+                "id": 33,
+                "logo_path": "/8lvHyhjr8oUKOOy2dKXoALWKdp0.png",
+                "name": "Universal Pictures",
+                "origin_country": "US"
+            },
+            {
+                "id": 507,
+                "logo_path": "/aRmHe6GWxYMRCQljF75rn2B9Gv8.png",
+                "name": "Atlas Entertainment",
+                "origin_country": "US"
+            }
+        ],
+        "production_countries": [
+            {
+                "iso_3166_1": "GB",
+                "name": "United Kingdom"
+            },
+            {
+                "iso_3166_1": "US",
+                "name": "United States of America"
+            }
+        ],
+        "release_date": "2023-07-19",
+        "revenue": 0,
+        "runtime": 181,
+        "spoken_languages": [
+            {
+                "english_name": "English",
+                "iso_639_1": "en",
+                "name": "English"
+            },
+            {
+                "english_name": "German",
+                "iso_639_1": "de",
+                "name": "Deutsch"
+            }
+        ],
+        "status": "Released",
+        "tagline": "The world forever changes.",
+        "title": "Oppenheimer",
+        "video": false,
+        "vote_average": 8.542,
+        "vote_count": 24
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/ctMserH8g2SeOAnCw5gFjdQF8mo.jpg",
+        "belongs_to_collection": null,
+        "budget": 100000000,
+        "genres": [
+            {
+                "id": 35,
+                "name": "Comedy"
+            },
+            {
+                "id": 12,
+                "name": "Adventure"
+            },
+            {
+                "id": 14,
+                "name": "Fantasy"
+            }
+        ],
+        "homepage": "https://www.barbie-themovie.com",
+        "id": 346698,
+        "imdb_id": "tt1517268",
+        "original_language": "en",
+        "original_title": "Barbie",
+        "overview": "Barbie and Ken are having the time of their lives in the colorful and seemingly perfect world of Barbie Land. However, when they get a chance to go to the real world, they soon discover the joys and perils of living among humans.",
+        "popularity": 1267.687,
+        "poster_path": "/cgYg04miVQUAG2FKk3amSnnHzOp.jpg",
+        "production_companies": [
+            {
+                "id": 82968,
+                "logo_path": "/gRROMOG5bpF6TIDMbfaa5gnFFzl.png",
+                "name": "LuckyChap Entertainment",
+                "origin_country": "US"
+            },
+            {
+                "id": 437,
+                "logo_path": "/nu20mtwbEIhUNnQ5NXVhHsNknZj.png",
+                "name": "Heyday Films",
+                "origin_country": "GB"
+            },
+            {
+                "id": 168848,
+                "logo_path": "/omEguKifcJixMvKWq85sUp4lFdT.png",
+                "name": "Mattel Films",
+                "origin_country": "US"
+            }
+        ],
+        "production_countries": [
+            {
+                "iso_3166_1": "GB",
+                "name": "United Kingdom"
+            },
+            {
+                "iso_3166_1": "US",
+                "name": "United States of America"
+            }
+        ],
+        "release_date": "2023-07-19",
+        "revenue": 0,
+        "runtime": 114,
+        "spoken_languages": [
+            {
+                "english_name": "English",
+                "iso_639_1": "en",
+                "name": "English"
+            }
+        ],
+        "status": "Released",
+        "tagline": "She's everything. He's just Ken.",
+        "title": "Barbie",
+        "video": false,
+        "vote_average": 8.406,
+        "vote_count": 53
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/cSYLX73WskxCgvpN3MtRkYUSj1T.jpg",
+        "belongs_to_collection": null,
+        "budget": 200000000,
+        "genres": [
+            {
+                "id": 16,
+                "name": "Animation"
+            },
+            {
+                "id": 35,
+                "name": "Comedy"
+            },
+            {
+                "id": 10751,
+                "name": "Family"
+            },
+            {
+                "id": 14,
+                "name": "Fantasy"
+            },
+            {
+                "id": 10749,
+                "name": "Romance"
+            }
+        ],
+        "homepage": "https://movies.disney.com/elemental",
+        "id": 976573,
+        "imdb_id": "tt15789038",
+        "original_language": "en",
+        "original_title": "Elemental",
+        "overview": "In a city where fire, water, land and air residents live together, a fiery young woman and a go-with-the-flow guy will discover something elemental: how much they have in common.",
+        "popularity": 1126.045,
+        "poster_path": "/8riWcADI1ekEiBguVB9vkilhiQm.jpg",
+        "production_companies": [
+            {
+                "id": 2,
+                "logo_path": "/wdrCwmRnLFJhEoH8GSfymY85KHT.png",
+                "name": "Walt Disney Pictures",
+                "origin_country": "US"
+            },
+            {
+                "id": 3,
+                "logo_path": "/1TjvGVDMYsj6JBxOAkUHpPEwLf7.png",
+                "name": "Pixar",
+                "origin_country": "US"
+            }
+        ],
+        "production_countries": [
+            {
+                "iso_3166_1": "US",
+                "name": "United States of America"
+            }
+        ],
+        "release_date": "2023-06-14",
+        "revenue": 311689287,
+        "runtime": 102,
+        "spoken_languages": [
+            {
+                "english_name": "English",
+                "iso_639_1": "en",
+                "name": "English"
+            }
+        ],
+        "status": "Released",
+        "tagline": "Opposites react.",
+        "title": "Elemental",
+        "video": false,
+        "vote_average": 7.573,
+        "vote_count": 500
+    }
+]

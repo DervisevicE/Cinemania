@@ -3,25 +3,23 @@ import { View, Text, SafeAreaView, TouchableWithoutFeedback, ScrollView, FlatLis
 import { styles } from "../styles/styles";
 import { useNavigation } from '@react-navigation/native';
 import Header from '../components/Header';
-
-
+import favoriteMoviesJson from '../api/favoriteMovies.json'
 
 var { width, height } = Dimensions.get("window")
 const numColumns = 2;
 export default function FavoriteMoviesScreen() {
-
     const navigation = useNavigation()
 
-    const data = [
-        { imgSrc: "https://www.vintagemovieposters.co.uk/wp-content/uploads/2020/11/IMG_5878-scaled.jpeg", title: "Avengers" },
-        { imgSrc: "https://www.vintagemovieposters.co.uk/wp-content/uploads/2020/11/IMG_5878-scaled.jpeg", title: "Avengers" },
-        { imgSrc: "https://www.vintagemovieposters.co.uk/wp-content/uploads/2020/11/IMG_5878-scaled.jpeg", title: "Avengers" },
-        { imgSrc: "https://www.vintagemovieposters.co.uk/wp-content/uploads/2020/11/IMG_5878-scaled.jpeg", title: "Avengers" },
-        { imgSrc: "https://www.vintagemovieposters.co.uk/wp-content/uploads/2020/11/IMG_5878-scaled.jpeg", title: "Avengers" },
-        { imgSrc: "https://www.vintagemovieposters.co.uk/wp-content/uploads/2020/11/IMG_5878-scaled.jpeg", title: "Avengers" },
-        { imgSrc: "https://www.vintagemovieposters.co.uk/wp-content/uploads/2020/11/IMG_5878-scaled.jpeg", title: "Avengers" },
-        { imgSrc: "https://www.vintagemovieposters.co.uk/wp-content/uploads/2020/11/IMG_5878-scaled.jpeg", title: "Avengers" },
-    ]
+    // const data = [
+    //     { imgSrc: "https://www.vintagemovieposters.co.uk/wp-content/uploads/2020/11/IMG_5878-scaled.jpeg", title: "Avengers" },
+    //     { imgSrc: "https://www.vintagemovieposters.co.uk/wp-content/uploads/2020/11/IMG_5878-scaled.jpeg", title: "Avengers" },
+    //     { imgSrc: "https://www.vintagemovieposters.co.uk/wp-content/uploads/2020/11/IMG_5878-scaled.jpeg", title: "Avengers" },
+    //     { imgSrc: "https://www.vintagemovieposters.co.uk/wp-content/uploads/2020/11/IMG_5878-scaled.jpeg", title: "Avengers" },
+    //     { imgSrc: "https://www.vintagemovieposters.co.uk/wp-content/uploads/2020/11/IMG_5878-scaled.jpeg", title: "Avengers" },
+    //     { imgSrc: "https://www.vintagemovieposters.co.uk/wp-content/uploads/2020/11/IMG_5878-scaled.jpeg", title: "Avengers" },
+    //     { imgSrc: "https://www.vintagemovieposters.co.uk/wp-content/uploads/2020/11/IMG_5878-scaled.jpeg", title: "Avengers" },
+    //     { imgSrc: "https://www.vintagemovieposters.co.uk/wp-content/uploads/2020/11/IMG_5878-scaled.jpeg", title: "Avengers" },
+    // ]
 
     let movieId = 1
 
@@ -32,10 +30,10 @@ export default function FavoriteMoviesScreen() {
 
     const renderItem = ({ item }) => (
 
-        <TouchableWithoutFeedback onPress={() => handleMoviePress(movieId)}>
+        <TouchableWithoutFeedback onPress={() => handleMoviePress(item.id)}>
             <View style={{ marginHorizontal: 4, padding: 8, backgroundColor: "#6b6a66" }}>
                 <Image
-                    source={{ uri: item.imgSrc }}
+                    source={{ uri: "https://image.tmdb.org/t/p/w500" + item.poster_path }}
                     style={{
                         width: width * 0.4,
                         height: height * 0.3,
@@ -65,7 +63,7 @@ export default function FavoriteMoviesScreen() {
             <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={{ paddingVertical: 10 }}>
 
                 <FlatList
-                    data={data}
+                    data={favoriteMoviesJson}
                     renderItem={renderItem}
                     keyExtractor={(item) => item.id}
                     numColumns={numColumns}

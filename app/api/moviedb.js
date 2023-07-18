@@ -58,3 +58,13 @@ export const fetchCastMembers = async (movieId) => {
         return {};
     }
 }
+
+export const fetchSimilarMovies = async (movieId) => {
+    try {
+        const response = await axios.get(`${apiUrl}/movie/${movieId}/similar?api_key=${apiKey}`);
+        return response.data;
+    } catch (error) {
+        console.log('error: ', error);
+        return {};
+    }
+}
