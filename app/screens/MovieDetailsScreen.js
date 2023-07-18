@@ -91,15 +91,17 @@ export default function MovieDetailsScreen({ route }) {
                             {movieDetails.overview}
                         </Text>
 
-                        {
-                            castMembers && castMembers.map((item) => {
-                                return (
-                                    <View style={styles.castContainer}>
-                                        <Text style={{ fontSize: 16, fontWeight: "bold", color: "white" }}>{item.original_name}</Text>
+                        <View style={{ height: 200 }}>
+                            <ScrollView showsVerticalScrollIndicator={false} nestedScrollEnabled={true}>
+                                {castMembers.map((item) => (
+                                    <View style={styles.castContainer} key={item.id}>
+                                        <Text style={{ fontSize: 16, fontWeight: "bold", color: "white" }}>
+                                            {item.original_name}
+                                        </Text>
                                     </View>
-                                )
-                            })
-                        }
+                                ))}
+                            </ScrollView>
+                        </View>
 
 
                     </View>
