@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { View, Text, SafeAreaView, Image, FlatList, ScrollView, Dimensions, TouchableOpacity, StyleSheet } from "react-native";
 import { styles } from "../styles/styles";
-import { fetchCastMembers, fetchMovieDetails } from "../api/moviedb";
+import { fetchCastMembers, fetchMovieDetails, fetchSimilarMovies } from "../api/moviedb";
+import favoriteMoviesJson from '../api/favoriteMovies.json'
+import MovieList from "../components/MovieList";
 
 
 export default function MovieDetailsScreen({ route }) {
@@ -9,11 +11,18 @@ export default function MovieDetailsScreen({ route }) {
     const { movieId } = route.params
     const [movieDetails, setMovieDetails] = useState(null)
     const [castMembers, setCastMembers] = useState()
+    const [favoriteMovies, setFavoriteMovies] = useState(favoriteMoviesJson)
+    const [similarMovies, setSimilarMovies] = useState([])
     console.log(movieId)
+
+    console.log(favoriteMovies)
+
+    const isFavoriteMovie = favoriteMoviesJson.find((movie) => movie.id === movieId)
 
     useEffect(() => {
         getMovieDetails(movieId)
         getCastMembers(movieId)
+        getSimilarMovies(movieId)
     }, [])
 
     const getMovieDetails = async (movieId) => {
@@ -26,11 +35,24 @@ export default function MovieDetailsScreen({ route }) {
         if (data && data.cast) {
             const actors = data.cast.filter((member) => member.known_for_department === "Acting");
             setCastMembers(actors);
-          }
+        }
     }
 
-    const onPressLearnMore = () => {
 
+    const getSimilarMovies = async (movieId) => {
+        const data = await fetchSimilarMovies(movieId)
+        if (data && data.results) {
+            setSimilarMovies(data.results)
+        }
+    }
+
+    const handleFavoriteMovies = (movieId) => {
+        if (isFavoriteMovie) {
+            const updatedFavorites = favoriteMovies.filter((movie) => movie.id !== movieId);
+            setFavoriteMovies(updatedFavorites);
+        } else {
+            setFavoriteMovies([...favoriteMovies, movieDetails]);
+        }
     }
 
     if (movieDetails === null) {
@@ -60,8 +82,8 @@ export default function MovieDetailsScreen({ route }) {
                         </Text>
                     </View>
 
-                    <TouchableOpacity onPress={onPressLearnMore} title="Favorites" style={styles.favoritesBtn}>
-                        <Text style={{ color: "white" }}>DELETE FROM FAVORITES</Text>
+                    <TouchableOpacity onPress={() => handleFavoriteMovies(movieId)} title="Favorites" style={styles.favoritesBtn}>
+                        <Text style={{ color: "white" }}>{isFavoriteMovie ? "DELETE FROM FAVORITES" : "ADD TO FAVORITES"}</Text>
                     </TouchableOpacity>
 
                     <View style={{ marginHorizontal: 16, marginTop: -40 }}>
@@ -74,6 +96,9 @@ export default function MovieDetailsScreen({ route }) {
                             renderItem={renderItem}
                         />
                     </View>
+
+
+                    <MovieList title="Similar movies" data={similarMovies} />
                 </View>
             </ScrollView>
         </SafeAreaView>
